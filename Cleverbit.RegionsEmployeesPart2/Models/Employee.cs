@@ -18,8 +18,8 @@ namespace Cleverbit.RegionsEmployeesPart2.Models
 
         public Employee()
         {
-            DateCreated = DateTime.Now;
-            DateModified = DateTime.Now;
+            //DateCreated = DateTime.Now;
+            //DateModified = DateTime.Now;
 
             if (DateCreated == DateTime.MinValue)
             {
@@ -32,8 +32,8 @@ namespace Cleverbit.RegionsEmployeesPart2.Models
             }
 
 
-            var a = new Employee();
-            a.DateCreated = DateTime.MaxValue;
+            //var a = new Employee();
+            //a.DateCreated = DateTime.MaxValue;
         }
     }
 }
