@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    AjaxOptions options = new AjaxOptions
+    {
+        UpdateTargetId = "searchResult",
+        LoadingElementId = "divLoading"
+    };
+}
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<div class="jumbotron">
+    <h1>Search Regions</h1> 
+    
+    <div>
+        @using (Ajax.BeginForm("SearchRegion", options))
+        {
+            @Html.TextBox("regionId", null, new { style = "width: 100px;"});
+            <button type="submit" class="btn btn-primary">Search</button>
+        }
+        <div id="divLoading" style="display: none;">
+            <img src="~/Content/ajax-loader.gif" alt="Loader"/>
+        </div>
+    </div>
+
+    <div id="searchResult">
+        <h2>@Html.Action("SearchRegion", new { regionId = -1 })</h2>
+    </div>
+</div>
+
