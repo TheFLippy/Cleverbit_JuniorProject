@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace Cleverbit.RegionsEmployeesPart2.Models
 {
@@ -15,11 +11,5 @@ namespace Cleverbit.RegionsEmployeesPart2.Models
         {
 
         }
-
-        //
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-        //}
     }
 }
